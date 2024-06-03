@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Abdirahman</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .city .img-2,
+        .places .img-3 {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-cont">
+            <div class="name">
+                <h1>{{profile.name}}</h1>
+            </div>
+            <div class="profile">
+                <img src="{{profile.image}}" width="150" alt="">
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container">
+        <!-- Machu Picchu Section -->
+        <section>
+            <h2>Machu Picchu</h2>
+            <div class="row city">
+                <div class="col s12 m6 img-2">
+                    <img src="{{machuPicchu.image}}" class="responsive-img" alt="Machu Picchu">
+                </div>
+                <div class="col s12 m6 text-1">
+                    <p>{{machuPicchu.description}}</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Foreign Language Section -->
+        <section>
+            <h2>Foreign Language</h2>
+            <div class="text-2">
+                <p>{{foreignLanguage.description}}</p>
+            </div>
+
+            <table class="highlight">
+                <thead>
+                    <tr>
+                        <th>English</th>
+                        <th>French</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each quotes}}
+                    <tr>
+                        <td>{{this.english}}</td>
+                        <td>{{this.french}}</td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Favourite Subjects Section -->
+        <section>
+            <h2>Favourite Subjects</h2>
+            <div class="row places">
+                {{#each Favouritesubjects}}
+                <div class="col s12 m6 l4 place cosmetic-place {{#if @first}}s12 offset-s12{{/if}} {{#if @last}}s12 offset-s12{{/if}}">
+                    <div class="row">
+                        <div class="col s12 img-3">
+                            <img src="{{this.image}}" class="responsive-img" alt="{{this.name}}">
+                        </div>
+                        <div class="col s12 text-3">
+                            <h3>{{this.name}}</h3>
+                            <p>{{this.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p>&copy; <span id="currentYear">{{currentYear}}</span> {{profile.name}}. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script id="template" type="text/x-handlebars-template">
+        <!-- This section will be dynamically filled by the Handlebars template -->
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.updateTextFields();
+
+            // Define your data
+            var data = {
+                profile: {
+                    name: "Mohamed Abdirahman",
+                    image: "./Profile pic.jpg"
+                },
+                currentYear: new Date().getFullYear(),
+                machuPicchu: {
+                    image: "./Machu_Picchu,_Peru.jpg",
+                    description: "I would like to visit Machu Picchu for its breathtaking scenery, mysterious history, and ancient architectural wonders. It offers a unique opportunity to explore the fascinating remnants of an ancient civilization while surrounded by stunning natural landscapes. Additionally, the sense of mystery surrounding its purpose and construction adds to its allure, making it a truly unforgettable destination for adventurers and history enthusiasts alike."
+                },
+                foreignLanguage: {
+                    description: "French is one of the foreign languages I would like to learn. Learning French in Africa offers numerous advantages due to its wide usage across the continent, particularly in government, trade, and tourism sectors. Proficiency in French opens doors to job opportunities and facilitates communication within Africa and internationally. Additionally, it provides access to French-speaking cultures, literature, and media, enriching cultural understanding and global perspective."
+                },
+                quotes: [
+                    {
+                        english: "The only way to do great work is to love what you do.",
+                        french: "La seule façon de faire un travail formidable est d'aimer ce que vous faites."
+                    },
+                    {
+                        english: "In the middle of difficulty lies opportunity.",
+                        french: "Au milieu de la difficulté se trouve l'opportunité"
+                    },
+                    {
+                        english: "Be the change that you wish to see in the world.",
+                        french: "Soyez le changement que vous souhaitez voir dans le monde."
+                    },
+                    {
+                        english: "The future belongs to those who believe in the beauty of their dreams.",
+                        french: "L'avenir appartient à ceux qui croient en la beauté de leurs rêves."
+                    }
+                ],
+                Favouritesubjects: [
+                    {
+                        name: "Software Engineering",
+                        image: "./Isimila-Stone-Age-site.jpg",
+                        description: "The scope of Software Engineering is broad, encompassing both technical and managerial aspects. Some principles fall into the fields of Computer Science and Mathematics, whereas others are derived from Economics, Management Science and Psychology."
+                    },
+                    {
+                        name: "Information Security",
+                        image: "./Telouet-Kasbah.jpg",
+                        description: "Security, as a core requirement when creating systems and software, introduce the fundamentals of computer security and cryptography, both the technical and managerial issues."
+                    },
+                    {
+                        name: "Human-Computer Interaction",
+                        image: "./Robben-Island.jpg",
+                        description: "The purpose of this module is to enable students to be able to demonstrate knowledge about Human Computer Interaction concepts and principles relating to measuring the user experience."
+                    }
+                ]
+            };
+
+            // Compile the Handlebars templates
+            var source = document.getElementById("template").innerHTML;
+            var template = Handlebars.compile(source);
+
+            // Insert the compiled HTML into your document
+            var html = template(data);
+            document.body.innerHTML += html;
+        });
+    </script>
+</body>
+</html>

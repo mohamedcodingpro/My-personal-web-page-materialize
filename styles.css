@@ -1,0 +1,139 @@
+/* src/css/style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f7f3; /* Updated background color */
+    color: #333;
+}
+
+header {
+    background-color: #775532; /* Darker brown */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #fff; /* White border */
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #faf8f2; /* Lighter background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+h2 {
+    color: #b0823e; /* Dark golden */
+}
+
+p {
+    line-height: 1.6;
+    color: #555; /* Dark gray */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+a {
+    color: #9cc140; /* Green */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ /* @media (max-width: 600px) {
+    header, main {
+        padding: 10px;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+ }
+
+    .place {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 1em 0;
+    }
+
+    /* Middle place adjustment */
+    /* .place:nth-child(2) {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .place:nth-child(2) .text-4 {
+        order: 1;
+        flex: 1;
+    }
+
+    .place:nth-child(2) .img-4 {
+        order: 2;
+        margin-left: 1em;
+        flex: 0 0 auto;
+    }
+
+    /* Reset order for first and last place */
+    /* .place:nth-child(1),
+    .place:nth-child(3) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .place:nth-child(1) .img-3,
+    .place:nth-child(3) .img-5 {
+        margin-right: 1em;
+        order: 1;
+        flex: 0 0 auto;
+    }
+
+    .place:nth-child(1) .text-3,
+    .place:nth-child(3) .text-5 {
+        order: 2;
+        flex: 1;
+        margin-left: 1em; Add margin to text */
+    } */
+
+    /* Reduce space between image and text in the .city section */
+     /* .city {
+        flex-direction: column;
+        align-items: flex-start;
+    } */
+
+    /* .city.img-2,
+    .city.text-1 {
+        width: 100%;
+        margin: 0;
+        
+    } */
+
+    /* .city.img-2 {
+        margin-bottom: 1em;
+} 
+
+@media (max=width: 960px){
+    Favouritesubjects.img{
+        display: flex;
+    }
+}  */ */ */
+

@@ -1,0 +1,50 @@
+{
+    "profile": {
+      "name": "Mohamed Abdirahman",
+      "image": "./Profile pic.jpg"
+    },
+    "machuPicchu": {
+      "image": "./Machu.jpg",
+      "description": "I would like to visit Machu Picchu for its breathtaking scenery, mysterious history, and ancient architectural wonders. It offers a unique opportunity to explore the fascinating remnants of an ancient civilization while surrounded by stunning natural landscapes. Additionally, the sense of mystery surrounding its purpose and construction adds to its allure, making it a truly unforgettable destination for adventurers and history enthusiasts alike."
+    },
+    "foreignLanguage": {
+      "language": "French",
+      "description": "French is one of the foreign languages I would like to learn. Learning French in Africa offers numerous advantages due to its wide usage across the continent, particularly in government, trade, and tourism sectors. Proficiency in French opens doors to job opportunities and facilitates communication within Africa and internationally. Additionally, it provides access to French-speaking cultures, literature, and media, enriching cultural understanding and global perspective."
+    },
+    "quotes": [
+      {
+        "english": "The only way to do great work is to love what you do.",
+        "french": "La seule façon de faire un travail formidable est d'aimer ce que vous faites."
+      },
+      {
+        "english": "In the middle of difficulty lies opportunity.",
+        "french": "Au milieu de la difficulté se trouve l'opportunité"
+      },
+      {
+        "english": "Be the change that you wish to see in the world.",
+        "french": "Soyez le changement que vous souhaitez voir dans le monde."
+      },
+      {
+        "english": "The future belongs to those who believe in the beauty of their dreams.",
+        "french": "L'avenir appartient à ceux qui croient en la beauté de leurs rêves."
+      }
+    ],
+    "Favouritesubjects": [
+      {
+        "name": "Software Engineering",
+        "image": "./SE.png",
+        "description": "The scope of Software Engineering is broad, encompassing both technical and managerial aspects. Some principles fall into the fields of Computer Science and Mathematics, whereas others are derived from Economics, Management Science and Psychology."
+      },
+      {
+        "name": "Information Security",
+        "image": "./IS.jpg",
+        "description": "Security, as a core requirement when creating systems and software, introduce the fundamentals of computer security and cryptography, both the technical and managerial issues."
+      },
+      {
+        "name": "Human-Computer Interaction",
+        "image": "./HCI.jpg",
+        "description": "The purpose of this module is to enable students to be able to demonstrate knowledge about Human Computer Interaction concepts and principles relating to measuring the user experience."
+      }
+    ]
+  }
+  
