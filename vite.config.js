@@ -4,10 +4,10 @@ import data from './data.json';
 export default {
   plugins: [
     handlebars({
-      context: 
+      context:
         data
-      , 
-      
+      ,
+
     }),
   ],
 };
